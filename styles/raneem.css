@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Open Sans",sans-serif;
+}
+body, html {
+        background-color: white;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+header{
+  height: 90px;
+  background: #2f3640;
+}
+
+.inner-width{
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.logo{
+  float: left;
+  padding: 20px 0;
+}
+
+.logo img{
+  height: 50px;
+}
+
+.navigation-menu{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navigation-menu a{
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.navigation-menu a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.navigation-menu i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.home{
+  color: #ff6b6b;
+}
+
+.News{
+  color: #0abde3;
+}
+
+.history{
+  color: #feca57;
+}
+
+.about{
+  color: #5f27cd;
+}
+
+.emergencies{
+  color: #1dd1a1;
+}
+
+.menu-toggle-btn{
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:700px) {
+  .menu-toggle-btn{
+    display: block !important;
+  }
+
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .navigation-menu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navigation-menu a{
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navigation-menu.active{
+    display: block;
+  }
+}
+.side1{
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+}
+.side1 a{
+  background: #e74c3c;
+  color: white;
+  font-size: 20px;
+  display: block;
+  width: 130px;
+  padding: 12px;
+  text-decoration: none;
+  margin: 8px;
+  color: white;
+  border-radius: 8px;
+  margin-left: -100px;
+  transition: 0.6s all;
+}
+.side1 a:hover{
+  margin-left: 0;
+
+}
+
+.side2{
+  position: absolute;
+  top: 140%;
+  transform: translateY(-50%);
+}
+.side2 a{
+  background: #e74c3c;
+  color: white;
+  font-size: 20px;
+  display: block;
+  width: 130px;
+  padding: 12px;
+  text-decoration: none;
+  margin: 8px;
+  color: white;
+  border-radius: 8px;
+  margin-left: -100px;
+  transition: 0.6s all;
+}
+.side2 a:hover{
+  margin-left: 0;
+
+}
+.side3{
+  position: absolute;
+  top: 210%;
+  transform: translateY(-50%);
+}
+.side3 a{
+  background: #e74c3c;
+  color: white;
+  font-size: 20px;
+  display: block;
+  width: 130px;
+  padding: 12px;
+  text-decoration: none;
+  margin: 8px;
+  color: white;
+  border-radius: 8px;
+  margin-left: -100px;
+  transition: 0.6s all;
+}
+.side3 a:hover{
+  margin-left: 0;
+
+}
+footer{
+  background: #f1f1f1;
+  padding: 10px 0;
+}
+.footer-cont{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap-reverse;
+}
+.social-media{
+  color: #001a21;
+  margin-right: 25px;
+  font-size: 25px;
+  text-decoration: none;
+  transition: .3s linear;
+}
+.social-media a:hover{
+  color: #fc5c65;
+}
+.right-col h1{
+  font-size: 20px;
+}
+.border{
+  width: 100px;
+  height: 4px;
+  background: #fc5c65;
+}
+.news-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.txtb{
+  flex: 1;
+  padding: 18px 40px;
+  font-size: 15px;
+  color: #293043;
+  background: #ddd;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  min-width: 260px;
+}
+.btn{
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: #fc5c65;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity .3 linear;
+}
+.btn:hover{
+  opacity: .7;
+}
+.page-content{
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and(max-width:960px){
+  .footer.cont{
+    max-width: 600px;
+  }
+  .right-col{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .left-col{
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width:700px){
+  .btn{
+    margin: 0;
+    width: 100%;
+    margin-top:20px;
+  }
+}
+.more{
+  text-align: right;
+  color: blue;
+
+}
