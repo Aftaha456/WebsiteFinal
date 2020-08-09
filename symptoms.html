@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symptoms</title>
+  <link rel="stylesheet" href="styles/a1.css">
+  <link rel="stylesheet" href="styles/a2.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <style media="screen">
+  body, html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cv.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  body {
+    background-color: #C9D1D3;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="inner-width">
+      <a href="#" class="logo"><img src="images/2.png" alt=""></a>
+      <i class="menu-toggle-btn fas fa-bars"></i>
+      <nav class="navigation-menu">
+        <a href="index.html"><i class="fas fa-home home"></i> Home</a>
+        <a href="news.html"><i class="fas fa-align-left News"></i> News Room</a>
+        <a href="kaha.html"><i class="fab fa-buffer history"></i> History</a>
+        <a href="Aboutus.html"><i class="fas fa-users about"></i> About Us</a>
+        <a href="ahlam1.html"><i class="fas fa-headset emergencies"></i> Emergencies</a>
+      </nav>
+    </div>
+  </header>
+    <div id="ahlam-container">
+
+    <div class="side">
+      <a href="tips.html" style="background:maroon;">Tips</a>
+    </div>
+
+    <section class="ahlam-section-1">
+      <h1>Symptoms of COVID-19</h1>
+      <table>
+        <tr>
+          <td align="center" class="image-box">
+            <img src="images/dry.png" alt="dry" class="hover-title" >
+            <div class="overlay">
+              <div class="symptom">Dry Cough</div>
+            </div>
+          </td>
+          <td align="center" class="image-box">
+            <img src="images/fatigue.png" alt="fatigue" class="hover-title" >
+            <div class="overlay">
+              <div class="symptom">Fatigue</div>
+            </div>
+          </td>
+          <td align="center" class="image-box">
+            <img src="images/fever.png" alt="fever2" class="hover-title" >
+            <div class="overlay">
+              <div class="symptom">Fever</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" class="image-box">
+            <img src="images/headache.png" alt="headache" class="hover-title" >
+            <div class="overlay">
+              <div class="symptom">Headache</div>
+            </div>
+          </td>
+          <td align="center" class="image-box">
+            <img src="images/bodyaches.png" alt="bodyaches" class="hover-title" >
+            <div class="overlay">
+              <div class="symptom">Body Aches</div>
+            </div>
+          </td>
+          <td align="center" class="image-box">
+            <img src="images/shortnessofbreath.png" alt="shortnessofbreath" class="hover-title">
+            <div class="overlay">
+              <div class="symptom">Shortness of Breath</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      </section>
+
+    <section class="ahlam-section-2">
+      <h1>Difference Between Flu and COVID-19</h1>
+      <p>Influenza (Flu) and COVID-19 are both contagious respiratory illnesses, but they are caused by different viruses. COVID-19 is caused by infection with a new coronavirus (called SARS-CoV-2) and flu is caused by infection with influenza viruses. Because some of the symptoms of flu and COVID-19 are similar, it may be hard to tell the difference between them based on symptoms alone, and testing may be needed to help confirm a diagnosis. Flu and COVID-19 share many characteristics.</p>
+    </section>
+
+    <section class="ahlam-section-3">
+      <h1>How is COVID-19 transmitted?</h1>
+      <div style="text-align: center"><iframe width="560" height="315" src="https://www.youtube.com/embed/5DC2wcoVEFs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </section>
+
+  </div><!-- end of #ahlam-container -->
+    <div id="advice">
+      <div class="ticker">
+        <p>Stay Safe, Stay Healthy!</p>
+        <p>Protect yourself and others from the spread COVID-19!</p>
+        <p>Wear your mask please!</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-cont">
+        <div class="left-col">
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class=rights-text>This website is part of the class group project for INFO2302.</p>
+        </div>
+        <div class="right-col">
+          <h3>Our News</h3>
+          <p>Enter Your Email To Get News And Updates.</p>
+          <form class="news-form" action="symptoms.html" method="post">
+            <input type="text" class="txtb" placeholder="Enter Your Email">
+            <input type="Submit" class="btn" value="Submit">
+          </form>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script type="text/javascript">
+      $(".menu-toggle-btn").click(function(){
+        $(this).toggleClass("fa-times");
+        $(".navigation-menu").toggleClass("active");
+      });
+
+
+      $(document).ready(function() {
+        var block_arr = $('.ticker p').map(function() { return $(this).get(0);}).toArray();
+
+        var ticker_item = $(block_arr[0]);
+        $(".ticker").html(ticker_item);
+        var ticker_width = $(".ticker").width();
+        var text_x = ticker_width;
+
+        console.log(block_arr.indexOf(ticker_item.get(0)));
+        console.log(block_arr.length);
+
+        scroll_ticker = function() {
+          text_x--;
+          ticker_item.css("left", text_x);
+          if (text_x < -1 * ticker_item.width()) {
+            ticker_item = $(block_arr[(block_arr.indexOf(ticker_item.get(0)) + 1 == block_arr.length) ? 0 : block_arr.indexOf(ticker_item.get(0)) + 1]);
+            ticker_item.css("left", text_x);
+            $(".ticker").html(ticker_item);
+            text_x = ticker_width;
+          }
+        }
+        setInterval(scroll_ticker, 3);
+      });
+
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Discovery page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/k1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <style media="screen">
+
+  .white{
+  position: relative;
+  margin: 17px auto 20px;
+  display: block;
+  text-align: center;
+  opacity: 0.5;
+  }
+  .ds h1 {
+    position: absolute;
+    bottom: 500px;
+    right: 464px;
+    text-align: center;
+    color: #413A3A;
+    text-shadow: 2px 2px;
+    font-size: 2.5em;
+  }
+  hr{
+position: absolute;
+bottom: 490px;
+right: 545px;
+color: black;
+  }
+  .para p {
+    position: absolute;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    bottom: 360px;
+    right: 279px;
+    font-size: 10px;
+  }
+  .hr2 hr{
+position: absolute;
+bottom: 350px;
+right: 545px;
+color: black;
+  }
+  .paraa{
+    position: absolute;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    bottom: 320px;
+    right: 490px;
+
+  }
+  .center {
+    position: absolute;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+.vid {
+  position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+bottom: 165px;
+right: 520px;
+}
+button{
+
+  position: absolute;
+  bottom: 140px;
+  right: 700px;
+
+}
+.but button{
+  position: absolute;
+  bottom: 140px;
+  right: 550px;
+
+}
+
+body, html {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cv.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  background-color: #C9D1D3;
+}
+
+  </style>
+
+  </head>
+  <body>
+
+
+
+
+
+    <header>
+    <div class="inner-width">
+      <a href="#" class="logo"><img src="images/2.png" alt=""></a>
+      <i class="menu-toggle-btn fas fa-bars"></i>
+      <nav class="navigation-menu">
+        <a href="index.html"><i class="fas fa-home home"></i> Home</a>
+        <a href="news.html"><i class="fas fa-align-left News"></i> News Room</a>
+        <a href="kaha.html"><i class="fab fa-buffer history"></i> History</a>
+        <a href="Aboutus.html"><i class="fas fa-users about"></i> About Us</a>
+        <a href="ahlam1.html"><i class="fas fa-headset emergencies"></i> Emergencies</a>
+      </nav>
+    </div>
+  </header>
+
+    <div class="white">
+      <img src="images/white.jpg" width="1200" height="450" alt=""> </div>
+      <div class="ds">
+        <h1> Discovery Of Covid-19 </h1>
+      </div>
+      <div class="hr2">
+        <hr style="width:20%;">
+      </div>
+
+
+        <div class="para">
+              <p style = "font-family:georgia,garamond,serif;font-size:15px;font-style:italic;">
+                  Cases of Covid-19 first emerged in late 2019, when a mysterious illness was reported in Wuhan, China.<br> The cause of the disease was soon confirmed as a new kind of coronavirus, and the infection has since<br> spread to many countries around the world and become a pandemic.<br>
+                  On 11 February the World Health Organization announced that the official name would be covid-19, <br> a shortened version of coronavirus disease 2019. The WHO refers to the specific virus that causes this<br> disease as the covid-19 virus.
+
+
+        <div class="paraa"
+        <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
+          Here is more info about COVID-19 </p>
+          </div>
+            <hr style="width:20%;">
+
+          <div class="vid">
+            <video id="myVideo" poster="images/poster.jpg" width="300" height="150" controls>
+            <source src="images/CovidInfo.mp4" type="video/mp4">
+
+          </div>
+
+        </video>
+        <div class="but">
+          <button onclick="playVid()" type="button">Play Video</button>
+        </div>
+
+                    <button onclick="pauseVid()" type="button">Pause Video</button>
+        </div>
+                </div>
+
+                <table>
+                  <tr>
+                    <td>
+                      <p> _________________ </p>
+                      </td>
+                      </tr>
+                      </table>
+
+
+
+
+<footer>
+<div class="footer-cont">
+  <div class="left-col">
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+<p class=rights-text>©Created by Kaha. All Right Reserved!</p>
+  </div>
+  <div class="right-col">
+    <h1>Our News</h1>
+    <div class="border"></div>
+    <p>Enter Your Email To Get News And Updates.</p>
+    <form class="news-form" action="Discovery.html" method="post">
+      <input type="text" class="txtb" placeholder="Enter Your Email">
+      <input type="Submit" class="btn" value="Submit">
+    </form>
+  </div>
+</div>
+</footer>
+
+
+
+    <script type="text/javascript">
+    var vid = document.getElementById("myVideo");
+
+    function playVid() {
+      vid.play();
+    }
+
+    function pauseVid() {
+      vid.pause();
+    }
+
+      $(".menu-toggle-btn").click(function(){
+        $(this).toggleClass("fa-times");
+        $(".navigation-menu").toggleClass("active");
+      });
+    </script>
+  </body>
+</html>

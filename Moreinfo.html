@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>More info</title>
+  <link rel="stylesheet" href="styles/r1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <style media="screen">
+  body, html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("cv.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  body {
+    background-color: #C9D1D3;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+      <div class="inner-width">
+        <a href="#" class="logo"><img src="images/2.png" alt=""></a>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="index.html"><i class="fas fa-home home"></i> Home</a>
+          <a href="news.html"><i class="fas fa-align-left News"></i> News Room</a>
+          <a href="kaha.html"><i class="fab fa-buffer history"></i> History</a>
+          <a href="Aboutus.html"><i class="fas fa-users about"></i> About Us</a>
+          <a href="ahlam1.html"><i class="fas fa-headset emergencies"></i> Emergencies</a>
+        </nav>
+      </div>
+    </header>
+
+
+  <div class="side">
+    <a href="aboutus.html" style="background:#fc5c65;">About US</a>
+  </div>
+
+
+  <div class="page-content">
+    <div class="images">
+      <img onclick="changeimg(this)" src="images/iium1.jpg" alt="">
+      <img onclick="changeimg(this)" src="images/iium3.jpg" alt="">
+      <img onclick="changeimg(this)" src="images/iium4.jpg" alt="">
+    </div>
+    <div class="pre">
+      <a onclick="this.parentElement.style.display='none'" class="ion-close"></a>
+      <img id="p" src="images/iium1.jpg" alt="">
+    </div>
+    <div class="WWR">
+      <h1>WHO WE ARE</h1>
+      <p>We are students from IIUM who volunteered to help people in Malaysia
+        by attempting our best to reach awareness about the virus,
+        we care about others, as one big family, and we do not want anyone
+        to be left behind because everybody is deserved to receive care.
+        As countless of us couldn't go back to their country because of the lockdown
+        so we want to share caring with each. Click to see our beautiful university IIUM!
+      </p>
+    </div>
+    <div class="locatio-right">
+      <h1>OUR UNIVERSITY LOCATION</h1>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.3994960092477!2d101.73248081475761!3d3.2504766976334976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38c2f70795af%3A0xf808897bf1163a3!2sInternational%20Islamic%20University%20Malaysia!5e0!3m2!1sen!2smy!4v1593257405332!5m2!1sen!2smy"
+        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="location-p">
+      <h1>ISLAMIC INTERNATIONAL UNIVERSITY MALAYSIA</h1>
+      <p>The International Islamic University Malaysia (Malay: Universiti Islam Antarabangsa Malaysia; Arabic: الجامعة الإسلامية العالمية بماليزيا‎), also known as IIUM, is a public university in Malaysia. Headquartered in Gombak, Selangor.
+        The university was established on 23 May 1983 and founded upon Islamic principles. Islamic values are inculcated into all disciplines. IIUM offers Bachelor's, Master's and doctoral degrees courses at its 14 faculties.
+        Since 1987, IIUM has produced more than 70,000 graduates and undergraduates from more than 100 countries around the world. Most of them were from Malaysia.</p>
+    </div>
+    <div class="Video">
+      <p>A short video to see our beautiful University!</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EvgXNzMHwrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-cont">
+      <div class="left-col">
+        <div class="social-media">
+          <a href="https://www.facebook.com/pg/kementeriankesihatanmalaysia/posts/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/kkmputrajaya?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/kementeriankesihatanmalaysia/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UC2CzLwbhTiI8pTKNVyrOnJQ" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class=rights-text>© Created By Raneem, All Right Reserved!</p>
+      </div>
+      <div class="right-col">
+        <h1>Our News</h1>
+        <div class="border-1"></div>
+        <p>Enter Your Email To Get News And Updates.</p>
+        <form class="news-form" action="Moreinfo.html" method="post">
+          <input type="text" class="txtb" placeholder="Enter Your Email">
+          <input type="Submit" class="btn" value="Submit">
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    function changeimg(image) {
+      var p = document.getElementById("p");
+      p.src = image.src;
+      p.parentElement.style.display = "block";
+    }
+    const email = document.getElementById('emaill');
+    const form = document.getElementById('formm');
+    form.addEventListener('submit', (e) => {
+      let messages = []
+      if (email.value == '' || email.value == null) {
+        window.alert('please enter your email to get the latest news!')
+      }
+    });
+  </script>
+</body>
+
+</html>

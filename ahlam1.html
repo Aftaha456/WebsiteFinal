@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-family: "Open Sans",sans-serif;
+    }
+    body, html {
+            background-color: white;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    header{
+      height: 90px;
+      background: #2f3640;
+    }
+
+    .inner-width{
+      max-width: 1000px;
+      padding: 0 10px;
+      margin: auto;
+    }
+
+    .logo{
+      float: left;
+      padding: 20px 0;
+      align:left;
+    }
+
+    .logo img{
+      height: 50px;
+    }
+
+    .navigation-menu{
+      float: right;
+      display: flex;
+      align-items: center;
+      min-height: 90px;
+    }
+
+    .navigation-menu a{
+      margin-left: 10px;
+      color: #ddd;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 12px 20px;
+      border-radius: 4px;
+      transition: .3s linear;
+    }
+
+    .navigation-menu a:hover{
+      background: #fff;
+      color: #2f3640;
+      transform: scale(1.1);
+    }
+
+    .navigation-menu i{
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    .home{
+      color: #ff6b6b;
+    }
+
+    .News{
+      color: #0abde3;
+    }
+
+    .history{
+      color: #feca57;
+    }
+
+    .about{
+      color: #5f27cd;
+    }
+
+    .emergencies{
+      color: #1dd1a1;
+    }
+
+    .menu-toggle-btn{
+      float: right;
+      height: 90px;
+      line-height: 90px !important;
+      color: #fff;
+      font-size: 26px;
+      display: none !important;
+      cursor: pointer;
+    }
+
+
+    @media screen and (max-width:700px) {
+      .menu-toggle-btn{
+        display: block !important;
+      }
+
+      .navigation-menu{
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        background: #172b4d;
+        top: 90px;
+        right: 0;
+        display: none;
+        padding: 20px 40px;
+        box-sizing: border-box;
+      }
+
+      .navigation-menu::before{
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #172b4d;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+      }
+
+      .navigation-menu a{
+        display: block;
+        margin: 10px 0;
+      }
+
+      .navigation-menu.active{
+        display: block;
+      }
+    }
+    .side1{
+      position: fixed;
+      top: 70%;
+      transform: translateY(-50%);
+    }
+    .side1 a{
+      background: #e74c3c;
+      color: white;
+      font-size: 20px;
+      display: block;
+      width: 170px;
+      padding: 12px;
+      text-decoration: none;
+      margin: 8px;
+      color: white;
+      border-radius: 8px;
+      margin-left: -100px;
+      transition: 0.6s all;
+    }
+    .side1 a:hover{
+      margin-left: 0;
+
+    }
+
+
+    footer{
+      background: #f1f1f1;
+      padding: 10px 0;
+    }
+    .footer-cont{
+      max-width: 1300px;
+      margin: auto;
+      padding: 0 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap-reverse;
+    }
+    .social-media{
+      color: #001a21;
+      margin-right: 25px;
+      font-size: 25px;
+      text-decoration: none;
+      transition: .3s linear;
+    }
+    .social-media a:hover{
+      color: #fc5c65;
+    }
+    .right-col h1{
+      font-size: 20px;
+    }
+    .border{
+      width: 100px;
+      height: 4px;
+      background: #fc5c65;
+    }
+    .news-form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .txtb{
+      flex: 1;
+      padding: 18px 40px;
+      font-size: 15px;
+      color: #293043;
+      background: #ddd;
+      border: none;
+      font-weight: 700;
+      outline: none;
+      border-radius: 30px;
+      min-width: 260px;
+    }
+    .btn{
+      padding: 18px 40px;
+      font-size: 16px;
+      color: #f1f1f1;
+      background: #fc5c65;
+      border: none;
+      font-weight: 700;
+      outline: none;
+      border-radius: 30px;
+      margin-left: 20px;
+      cursor: pointer;
+      transition: opacity .3 linear;
+    }
+    .btn:hover{
+      opacity: .7;
+    }
+    .page-content{
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    @media screen and(max-width:960px){
+      .footer.cont{
+        max-width: 600px;
+      }
+      .right-col{
+        width: 100%;
+        margin-bottom: 60px;
+      }
+      .left-col{
+        width: 100%;
+        text-align: center;
+      }
+    }
+    @media screen and (max-width:700px){
+      .btn{
+        margin: 0;
+        width: 100%;
+        margin-top:20px;
+      }
+    }
+    .more{
+      text-align: right;
+      color: blue;
+
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .sub{
+      background-color: #9bf77b;
+      width: 70px;
+      height: 30px;
+      font-size: 15px;
+      font-color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }}
+
+      .ticker p {
+      position: absolute;
+      white-space: nowrap;
+      width: auto;
+      color: black;
+    }
+
+    .ticker a {
+      color: white;
+      animation-duration: 2s;
+    }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="inner-width">
+        <a href="#" class="logo"><img src="images/2.png" alt=""></a>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="index.html"><i class="fas fa-home home"></i> Home</a>
+          <a href="news.html"><i class="fas fa-align-left News"></i> News Room</a>
+          <a href="kaha.html"><i class="fab fa-buffer history"></i> History</a>
+          <a href="Aboutus.html"><i class="fas fa-users about"></i> About Us</a>
+          <a href="ahlam1.html"><i class="fas fa-headset emergencies"></i> Emergencies</a>
+        </nav>
+      </div>
+    </header>
+    <div class="side1">
+      <a href="#" style="background:blue;">More info: <img height="30px" src="images/18.png" alt="">
+        <a href="ahlam1.html">Contact Us</a>
+        <a href="tips.html">Tips</a>
+        <a href="symptoms.html">Symptoms </a></a>
+    </div>
+      <img src="images/15.png"width="100%" >
+    <div class="container">
+      <div style="text-align:center">
+
+
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="images/14.jpg" style="width:60% align:center" height:auto>
+        </div>
+        <div class="column">
+          <form name="myForm" action="ahlam1.html" onsubmit="return validateForm()">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="malaysia">Malaysia</option>
+              <option value="usa">USA</option>
+              <option value="canada">Canada</option>
+              <option value="others">Others</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+            <a href="ahlam1.html"><button  class="sub" >Submit</button></a>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.3994960092477!2d101.73248081380905!3d3.250476697633488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38c2f70795af%3A0xf808897bf1163a3!2sInternational%20Islamic%20University%20Malaysia!5e0!3m2!1sen!2smy!4v1596800354766!5m2!1sen!2smy" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+<br>
+     <div id="advice">
+       <div class="ticker">
+         <p>Wear your mask please!</p>
+         <p>Stay Safe, Stay Healthy!</p>
+         <p>Protect yourself and others from the spread of COVID-19!</p>
+      </div>
+     </div>
+<br>
+
+<footer>
+<div class="footer-cont">
+  <div class="left-col">
+    <div class="social-media">
+        <a href="https://www.facebook.com/pg/kementeriankesihatanmalaysia/posts/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/kkmputrajaya?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/kementeriankesihatanmalaysia/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UC2CzLwbhTiI8pTKNVyrOnJQ" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+<p class=rights-text>© Created By Aftaha Ahmed, All Rights Reserved!</p>
+  </div>
+  <div class="right-col">
+    <h1>Our News</h1>
+    <div class="border"></div>
+    <p>Enter Your Email To Get News And Updates.</p>
+    <form class="news-form" method="post" name="myForm1" action="ahlam1.html" onsubmit="return validateForm1()">
+      <input type="text"id="eml" class="txtb" placeholder="Enter Your Email" >
+      <button class="btn" >Submit</button>
+    </form>
+  </div>
+</div>
+</footer>
+<script src="js/all.js" charset="utf-8"></script>
+<script type="text/javascript">
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["lname"].value;
+  var z = document.forms["myForm"]["subject"].value;
+
+  if (x == "") {
+    alert("First Name must be filled out");
+    return false;
+  }
+  else if (y == "") {
+    alert("Last Name must be filled out");
+    return false;
+  }
+  else if (z == "") {
+    alert("Some details must be filled out");
+    return false;
+  }
+  else
+    return myFunction1();
+}
+
+$(".menu-toggle-btn").click(function(){
+  $(this).toggleClass("fa-times");
+  $(".navigation-menu").toggleClass("active");
+});
+
+
+$(document).ready(function() {
+  var block_arr = $('.ticker p').map(function() { return $(this).get(0);}).toArray();
+
+  var ticker_item = $(block_arr[0]);
+  $(".ticker").html(ticker_item);
+  var ticker_width = $(".ticker").width();
+  var text_x = ticker_width;
+
+  console.log(block_arr.indexOf(ticker_item.get(0)));
+  console.log(block_arr.length);
+
+  scroll_ticker = function() {
+    text_x--;
+    ticker_item.css("left", text_x);
+    if (text_x < -1 * ticker_item.width()) {
+      ticker_item = $(block_arr[(block_arr.indexOf(ticker_item.get(0)) + 1 == block_arr.length) ? 0 : block_arr.indexOf(ticker_item.get(0)) + 1]);
+      ticker_item.css("left", text_x);
+      $(".ticker").html(ticker_item);
+      text_x = ticker_width;
+    }
+  }
+  setInterval(scroll_ticker, 3);
+});
+
+
+</script>
+  </body>
+</html>
